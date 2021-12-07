@@ -9,36 +9,44 @@
             Console.WriteLine("4 Multiplication");
             Console.WriteLine("5 Exit");
             int input = Int32.Parse(Console.ReadLine());
-            if (input == 1) {
+            if (input == 1)
+            {
                 Console.WriteLine("Enter first number");
                 int num1 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Enter second number");
                 int num2 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Result: " + Addition(num1, num2));
             }
-            else if (input == 2) {
+            else if (input == 2)
+            {
                 Console.WriteLine("Enter first number");
                 int num1 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Enter second number");
                 int num2 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Result: " + Subtraction(num1, num2));
             }
-            else if (input == 3) {
+            else if (input == 3)
+            {
                 Console.WriteLine("Enter first number");
                 int num1 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Enter second number");
                 int num2 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Result: " + Division(num1, num2));
             }
-            else if (input == 4) {
+            else if (input == 4)
+            {
                 Console.WriteLine("Enter first number");
                 int num1 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Enter second number");
                 int num2 = Int32.Parse(Console.ReadLine());
                 Console.WriteLine("Result: " + Multiplication(num1, num2));
             }
-            else if (input == 5) {
+            else if (input == 5)
+            {
                 System.Environment.Exit(0);
+            }
+            else {
+                Console.WriteLine("Invalid input");
             }
 
         }
