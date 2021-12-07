@@ -1,4 +1,6 @@
-﻿class Calculator { 
+﻿using System.Text.RegularExpressions;
+
+class Calculator { 
 
     static void Main(string[] args) {
         while (true) {
@@ -14,35 +16,99 @@
                 int input = Int32.Parse(inpt);
                 if (input == 1)
                 {
-                    Console.WriteLine("Enter first number");
-                    int num1 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter second number");
-                    int num2 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Result: " + Addition(num1, num2));
+                    try
+                    {
+                        Console.WriteLine("Enter first number");
+                        String s1 = Console.ReadLine();
+                        if (Regex.IsMatch(s1, @"^\d+$"))
+                        {
+                            int n1 = Int32.Parse(inpt);
+                            Console.WriteLine("Enter second number");
+                            String s2 = Console.ReadLine();
+                            if (Regex.IsMatch(s2, @"^\d+$"))
+                            {
+                                int n2 = Int32.Parse(inpt);
+                                Console.WriteLine("Result: " + Addition(n1, n2));
+                            } 
+                        }
+                        Console.WriteLine("Invalid Input");
+
+                    }
+                    catch (FormatException ex)
+                    {
+                        Console.WriteLine("Invalid Input");
+                    }
                 }
                 else if (input == 2)
                 {
-                    Console.WriteLine("Enter first number");
-                    int num1 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter second number");
-                    int num2 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Result: " + Subtraction(num1, num2));
+                    try
+                    {
+                        Console.WriteLine("Enter first number");
+                        String s1 = Console.ReadLine();
+                        if (Regex.IsMatch(s1, @"^\d+$"))
+                        {
+                            int n1 = Int32.Parse(inpt);
+                            Console.WriteLine("Enter second number");
+                            String s2 = Console.ReadLine();
+                            if (Regex.IsMatch(s2, @"^\d+$"))
+                            {
+                                int n2 = Int32.Parse(inpt);
+                                Console.WriteLine("Result: " + Subtraction(n1, n2));
+                            }
+                        }
+                        Console.WriteLine("Invalid Input");
+                    }
+                    catch (FormatException ex)
+                    {
+                        Console.WriteLine("Invalid Input");
+                    }
                 }
                 else if (input == 3)
                 {
-                    Console.WriteLine("Enter first number");
-                    int num1 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter second number");
-                    int num2 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Result: " + Division(num1, num2));
+                    try
+                    {
+                        Console.WriteLine("Enter first number");
+                        String s1 = Console.ReadLine();
+                        if (Regex.IsMatch(s1, @"^\d+$"))
+                        {
+                            int n1 = Int32.Parse(inpt);
+                            Console.WriteLine("Enter second number");
+                            String s2 = Console.ReadLine();
+                            if (Regex.IsMatch(s2, @"^\d+$"))
+                            {
+                                int n2 = Int32.Parse(inpt);
+                                Console.WriteLine("Result: " + Division(n1, n2));
+                            }
+                        }
+                        Console.WriteLine("Invalid Input");
+                    }
+                    catch (FormatException ex)
+                    {
+                        Console.WriteLine("Invalid Input");
+                    }
                 }
                 else if (input == 4)
                 {
-                    Console.WriteLine("Enter first number");
-                    int num1 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter second number");
-                    int num2 = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine("Result: " + Multiplication(num1, num2));
+                    try
+                    {
+                        Console.WriteLine("Enter first number");
+                        String s1 = Console.ReadLine();
+                        if (Regex.IsMatch(s1, @"^\d+$"))
+                        {
+                            int n1 = Int32.Parse(inpt);
+                            Console.WriteLine("Enter second number");
+                            String s2 = Console.ReadLine();
+                            if (Regex.IsMatch(s2, @"^\d+$"))
+                            {
+                                int n2 = Int32.Parse(inpt);
+                                Console.WriteLine("Result: " + Multiplication(n1, n2));
+                            }
+                        }
+                        Console.WriteLine("Invalid Input");
+                    }
+                    catch (FormatException ex) {
+                        Console.WriteLine("Invalid Input"); 
+                            }
                 }
                 else if (input == 5)
                 {
