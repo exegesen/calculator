@@ -1,8 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 
-class Calculator { 
+public class Calculator { 
 
-    static void Main(string[] args) {
+    public static void Main(string[] args) {
         while (true) {
             Console.WriteLine("Welcome to calculator! Enter operation");
             Console.WriteLine("1 Addition");
@@ -125,34 +125,81 @@ class Calculator {
 
         }
 
-        double Addition(double a, double b) {
-            double result = 0;
-            result = a + b;
-            return result;
-        }
-        double Subtraction(double a, double b)
-        {
-            double result = 0;
-            result = a - b;
-            return result;
-        }
-        double Division(double a, double b)
-        {
-            double result = 0;
-            if (b == 0) {
-                Console.WriteLine("NaN: Not a Number");
-                return double.NaN;
-                Console.WriteLine("NaN: Not a Number");
-            }
-            result = a / b;
-            return result;
-        }
-        double Multiplication(double a, double b)
-        {
-            double result = 0;
-            result = a * b;
-            return result;
-        }
+        
 
+    }
+    public static double Addition(double a, double b)
+    {
+        double result = 0;
+        result = a + b;
+        return result;
+    }
+    public static double[] Addition(double[] a, double[] b)
+    {
+        double[] result = new double[a.Length];
+        for (int i = 0; i < a.Length; i++) {
+            result[i] = a[i] + b[i];
+        }
+        return result;
+    }
+    public static double[] Addition(double[] a, double b)
+    {
+        double[] result = new double[a.Length];
+        for (int i = 0; i < a.Length; i++)
+        {
+            result[i] = a[i] + b;
+        }
+        return result;
+    }
+    public static double Subtraction(double a, double b)
+    {
+        double result = 0;
+        result = a - b;
+        return result;
+    }
+    public static double[] Subtraction(double[] a, double[] b)
+    {
+        double[] result = new double[a.Length];
+        for (int i = 0; i < a.Length; i++)
+        {
+            result[i] = a[i] - b[i];
+        }
+        return result;
+    }
+    public static double[] Subtraction(double[] a, double b)
+    {
+        double[] result = new double[a.Length];
+        for (int i = 0; i < a.Length; i++)
+        {
+            result[i] = a[i] - b;
+        }
+        return result;
+    }
+    public static double[] Subtraction(double a, double[] b)
+    {
+        double[] result = new double[b.Length];
+        for (int i = 0; i < b.Length; i++)
+        {
+            result[i] = a - b[i];
+        }
+        return result;
+    }
+    public static double Division(double a, double b)
+    {
+        double result = 0;
+        if (b == 0)
+        {
+            Console.WriteLine("NaN: Not a Number");
+            return double.NaN;
+            Console.WriteLine("NaN: Not a Number");
+        }
+        result = a / b;
+        return result;
+    }
+    public static double Multiplication(double a, double b)
+    {
+        double result = 0;
+        result = a * b;
+        return result;
     }
 }
